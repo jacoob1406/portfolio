@@ -144,6 +144,12 @@ html, body {
             .welcome .overlay-menu .overlay-menu-1 ul li a:hover {
               color: #FF3B3F; }
 
+@media (max-width: 480px) {
+  .welcome .overlay-menu {
+    width: 90%; } }
+@media (max-width: 350px) {
+  .welcome .overlay-menu {
+    width: 100%; } }
 .stick {
   position: fixed;
   z-index: 100;
