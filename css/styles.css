@@ -124,6 +124,11 @@ html, body {
     -o-animation: color-change 3s infinite;
     -ms-animation: color-change 3s infinite;
     animation: color-change 3s infinite; }
+    .welcome #arrow:hover {
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused; }
   .welcome .overlay-menu {
     height: 0;
     opacity: 0;
@@ -419,10 +424,17 @@ html, body {
     width: 50%;
     height: 300px;
     margin: 0 30px;
-    -webkit-animation: zoom 5s infinite;
-    animation: zoom 10s infinite;
-    background: url("../media/a.jpg") center no-repeat;
+    -webkit-animation: zoom 25s infinite;
+    animation: zoom 25s infinite;
+    background: url("../media/a2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     position: relative;
+    -webkit-box-shadow: 5px -5px 50px #A9A9A9;
+    -moz-box-shadow: 5px -5px 50px #A9A9A9;
+    box-shadow: 5px -5px 50px #A9A9A9;
     /* h1{
          position: absolute;
          color: $col3;
@@ -434,12 +446,12 @@ html, body {
   0%,100% {
     background-size: 100%; }
   50% {
-    background-size: 105%; } }
+    background-size: 110%; } }
 @keyframes zoom {
   0%, 100% {
     background-size: 100%; }
   50% {
-    background-size: 105%; } }
+    background-size: 110%; } }
   .contact .contact-form {
     width: 50%; }
     .contact .contact-form h1 {
@@ -455,7 +467,7 @@ html, body {
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         border-radius: 10px;
-        border: 0;
+        border: 2px solid #EFEFEF;
         font-family: 'Alegreya', serif;
         text-align: center;
         height: 30px;
@@ -463,7 +475,8 @@ html, body {
         letter-spacing: 2px; }
         .contact .contact-form form input:focus, .contact .contact-form form textarea:focus {
           border: 2px solid #CAEBF2;
-          outline-width: 0; }
+          outline-width: 0;
+          margin-bottom: -2px; }
       .contact .contact-form form textarea {
         height: auto !important; }
       .contact .contact-form form #submit {
@@ -498,11 +511,12 @@ html, body {
 @media (max-width: 768px) {
   .contact {
     display: block;
-    padding-top: 0; }
+    padding-top: 30px; }
     .contact .contact-pic {
       width: 80%;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      height: 200px; }
     .contact .contact-form {
       width: 100%;
       padding-top: 0px;

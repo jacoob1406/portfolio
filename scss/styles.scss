@@ -180,6 +180,13 @@ html, body{
         -o-animation: color-change 3s infinite;
         -ms-animation: color-change 3s infinite;
         animation: color-change 3s infinite;
+
+        &:hover{
+            -webkit-animation-play-state: paused;
+            -moz-animation-play-state: paused;
+            -o-animation-play-state: paused;
+            animation-play-state: paused;
+        }
     }
 
     //ovetlay-menu
@@ -588,6 +595,25 @@ html, body{
     }
 }
 
+/// Box Shadow
+/// @param {Size} $x [2px] - X
+/// @param {Size} $y [2px] - Y
+/// @param {Size} $blur [5px] - Blur
+/// @param {Color} $color [rgba(0,0,0,.4)] - Color
+/// @param {Boolean} $inset - Inset
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $color;
+        -moz-box-shadow:inset $top $left $blur $color;
+        box-shadow:inset $top $left $blur $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+
 .contact{
     display: flex;
     width: 100%;
@@ -599,10 +625,15 @@ html, body{
         width: 50%;
         height: 300px;
         margin: 0 30px;
-        -webkit-animation:zoom 5s infinite;
-        animation:zoom 10s infinite;
-        background:url('../media/a.jpg') center no-repeat;
+        -webkit-animation:zoom 25s infinite;
+        animation:zoom 25s infinite;
+        background:url('../media/a2.jpg') no-repeat center center ;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         position: relative;
+        @include box-shadow(5px, -5px, 50px, $col2, false);
 
         /* h1{
              position: absolute;
@@ -618,7 +649,7 @@ html, body{
             background-size:100%;
         }
         50%{
-            background-size:105%;
+            background-size:110%;
         }
     }
     @keyframes zoom{
@@ -626,7 +657,7 @@ html, body{
             background-size:100%;
         }
         50%{
-            background-size:105%;
+            background-size:110%;
         }
     }
 
@@ -646,7 +677,7 @@ html, body{
                 width: 60%;
                 margin: 10px auto;
                 @include border-radius(10px);
-                border: 0;
+                border: 2px solid $col4;
                 font-family: 'Alegreya', serif;
                 text-align: center;
                 height: 30px;
@@ -656,6 +687,7 @@ html, body{
                 &:focus{
                     border: 2px solid $col1;
                     outline-width: 0;
+                    margin-bottom: -2px;
                 }
             }
 
@@ -708,12 +740,13 @@ html, body{
 @media (max-width: 768px){
     .contact{
         display: block;
-        padding-top: 0;
+        padding-top: 30px;
 
         .contact-pic{
             width: 80%;
             margin-left: auto;
             margin-right: auto;
+            height: 200px;
         }
         .contact-form{
             width: 100%;
