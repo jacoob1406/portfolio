@@ -627,7 +627,7 @@ html, body{
         margin: 0 30px;
         -webkit-animation:zoom 25s infinite;
         animation:zoom 25s infinite;
-        background:url('../media/a2.jpg') no-repeat center center ;
+        background:url('../media/a2.jpg') no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -755,7 +755,7 @@ html, body{
             margin-right: auto;
 
             h1{
-                padding: 0px;
+                padding: 15px 0 0 0 ;
             }
 
             form{
@@ -793,10 +793,63 @@ footer.foo{
     width: 100%;
     text-align: center;
     height: 20px;
-    margin: auto;
     @extend %flexbox;
     justify-content:center;
     align-content:center;
     flex-direction:column; 
+    padding: 0;
+    margin: 0;
+}
+
+#cv{
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 10px 10px 10px 30px;
+    color: $col3;
+    position: fixed;
+    top: 70%;
+    right: -200px;
+    background: $col1;
+    font-size: 2em;
+    @include transition(0.6s ease-in);
+    @include border-radius(10% 0 0 10%);
+
+
+
+    a{
+        text-decoration: none;
+        color: $col3;
+        &:hover{
+            h1{
+                color: black;
+            }
+        }
+
+
+        h1{
+            font-size: 1.5em;
+            padding: 0;
+        }
+    }
+
+    span{
+        position: absolute;
+        top: 35%;
+        left: 1px;
+        color: $col2;
+        font: 30px arial, sans-serif;
+        padding-left: 5px;
+
+        &:hover{
+            cursor: pointer; 
+            color: black;
+        }
+
+    }
+}
+
+.showcv{
+    right: 0 !important;
 }
 

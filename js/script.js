@@ -45,6 +45,30 @@ window.onload = function () {
         ;
     };
 
+//cv dpwnload
+    var disable = true;
+
+    function slideCv() {
+        const cv = document.getElementById('cv');
+        let h = document.getElementsByClassName('welcome')[0].offsetHeight
+                + document.getElementsByClassName('about')[0].offsetHeight
+                + document.getElementsByClassName('skills')[0].offsetHeight;
+        console.log(h);
+
+        if (window.pageYOffset > h && disable === true) {
+            cv.classList.add("showcv");
+        } else {
+            cv.classList.remove("showcv");
+        }
+    }
+
+    window.onscroll = slideCv;
+
+    document.getElementById('cvclose').onclick = function () {
+        document.getElementById('cv').classList.remove("showcv");
+        disable = false;
+    };
+
     document.getElementById('arrow').onclick = function () {
         let h = document.getElementsByClassName('welcome')[0].offsetHeight;
         window.scroll({top: h + 1, left: 0, behavior: 'smooth'});

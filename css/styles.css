@@ -523,7 +523,7 @@ html, body {
       margin-left: auto;
       margin-right: auto; }
       .contact .contact-form h1 {
-        padding: 0px; }
+        padding: 15px 0 0 0; }
       .contact .contact-form form {
         font-family: 'Amatic SC', cursive; }
         .contact .contact-form form input, .contact .contact-form form textarea {
@@ -544,9 +544,51 @@ footer.foo {
   width: 100%;
   text-align: center;
   height: 20px;
-  margin: auto;
   justify-content: center;
   align-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 0;
+  margin: 0; }
+
+#cv {
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 10px 10px 10px 30px;
+  color: #FF3B3F;
+  position: fixed;
+  top: 70%;
+  right: -200px;
+  background: #CAEBF2;
+  font-size: 2em;
+  -moz-transition: 0.6s ease-in;
+  -o-transition: 0.6s ease-in;
+  -webkit-transition: 0.6s ease-in;
+  transition: 0.6s ease-in;
+  -webkit-border-radius: 10% 0 0 10%;
+  -moz-border-radius: 10% 0 0 10%;
+  -ms-border-radius: 10% 0 0 10%;
+  border-radius: 10% 0 0 10%; }
+  #cv a {
+    text-decoration: none;
+    color: #FF3B3F; }
+    #cv a:hover h1 {
+      color: black; }
+    #cv a h1 {
+      font-size: 1.5em;
+      padding: 0; }
+  #cv span {
+    position: absolute;
+    top: 35%;
+    left: 1px;
+    color: #A9A9A9;
+    font: 30px arial, sans-serif;
+    padding-left: 5px; }
+    #cv span:hover {
+      cursor: pointer;
+      color: black; }
+
+.showcv {
+  right: 0 !important; }
 
 /*# sourceMappingURL=styles.css.map */
