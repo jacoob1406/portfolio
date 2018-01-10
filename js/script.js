@@ -5,6 +5,20 @@
  */
 window.onload = function () {
 
+//    if (!!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g))
+//    {
+//
+//    }
+
+    window.onscroll = function () {
+        let ypos = window.pageYOffset;
+        let welc = document.getElementsByClassName('welcome')[0];
+        welc.style.top = ypos * 1 + 'px';
+    }
+
+
+
+
     document.getElementById('open').onclick = showMenu;
     function showMenu() {
         document.getElementById('main-heading').style.display = 'none';
@@ -53,7 +67,6 @@ window.onload = function () {
         let h = document.getElementsByClassName('welcome')[0].offsetHeight
                 + document.getElementsByClassName('about')[0].offsetHeight
                 + document.getElementsByClassName('skills')[0].offsetHeight;
-        console.log(h);
 
         if (window.pageYOffset > h && disable === true) {
             cv.classList.add("showcv");
