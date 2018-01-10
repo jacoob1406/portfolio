@@ -626,22 +626,14 @@ html, body{
         height: 300px;
         margin: 0 30px;
         -webkit-animation:zoom 25s infinite;
-        animation:zoom 25s infinite;
-        background:url('../media/a2.jpg') no-repeat center center;
+        animation:zoom 10s infinite;
+        background:url('../media/a3.jpg') no-repeat center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        position: relative;
         @include box-shadow(5px, -5px, 50px, $col2, false);
 
-        /* h1{
-             position: absolute;
-             color: $col3;
-             bottom: 4px;
-             font-size: 3em;
-             right: -70px;
-         }*/
     }
     //DODAJ TUTAJ WIECEJ TYCH WEBKITÓW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     @-webkit-keyframes zoom{
@@ -649,7 +641,7 @@ html, body{
             background-size:100%;
         }
         50%{
-            background-size:110%;
+            background-size:105%;
         }
     }
     @keyframes zoom{
@@ -657,7 +649,7 @@ html, body{
             background-size:100%;
         }
         50%{
-            background-size:110%;
+            background-size:105%;
         }
     }
 
