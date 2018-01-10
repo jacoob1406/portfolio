@@ -74,4 +74,14 @@ window.onload = function () {
         window.scroll({top: h + 1, left: 0, behavior: 'smooth'});
     };
 
+    document.getElementById('playvid').onclick = function () {
+        document.getElementById('video').style.display = 'flex';
+        document.getElementById('video').style.opacity = 1;
+    };
+
+    document.getElementById('closevid').onclick = function () {
+        document.getElementById('video').style.opacity = 0;
+        document.getElementById('video').style.display = 'none';
+    };
+
 };
