@@ -10,12 +10,11 @@ window.onload = function () {
 //
 //    }
 
-    window.onscroll = function () {
+    window.addEventListener('scroll', function () {
         let ypos = window.pageYOffset;
         let welc = document.getElementsByClassName('welcome')[0];
         welc.style.top = ypos * 1 + 'px';
-    }
-
+    })
 
 
 
