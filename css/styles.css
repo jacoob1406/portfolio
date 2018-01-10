@@ -14,14 +14,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Amatic SC', cursive;
-  font-weight: bold; }
+  font-weight: bold;
+  max-width: 100vw; }
 
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  max-width: 100vw; }
 
 .welcome {
   background: #FF3B3F;

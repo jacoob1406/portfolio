@@ -74,6 +74,7 @@ $col4: #EFEFEF; //light grey
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
+    max-width:100vw;
 }
 
 html, body{
@@ -82,6 +83,7 @@ html, body{
     box-sizing: border-box;
     width:100%;
     height:100%;
+    max-width:100vw;
 }
 
 .welcome{
@@ -883,4 +885,3 @@ footer.foo{
 
     }
 }
-
