@@ -9,11 +9,42 @@ window.onload = function () {
 //    {
 //
 //    }
+//FUNKCJA KTÓRA SKRACA W CAŁYM DOKUMENCIE DOC.GETELEMBYID
+    function _(id) {
+        return document.getElementById(id);
+    }
+    function submitForm() {
+        _('submit').disabled = true;
+        _('status').innerHTML = 'please wait ...';
+        var formdata = new FormData();
+        formdata.append("name", _("name").value);
+        formdata.append("email", _("email").value);
+        formdata.append("message", _("message").value);
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST", "../php/mail.php");  //?? czy znajdzie nam plik php ?
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4 && ajax.status == 200) {
+                if (ajax.responseText == "success") {
+                    _("myform").innerHTML = '<h2>Thanks ' + _("name").value + ', your message has been sent.</h2>';
+                } else {
+                    _("status").innerHTML = ajax.responseText;
+                    _("submit").disabled = false;
+                }
+            }
+        }
+        ajax.send(formdata);
+    }
+
+//----------------------------------------------------------------
 
     window.addEventListener('scroll', function () {
-        let ypos = window.pageYOffset;
-        let welc = document.getElementsByClassName('welcome')[0];
-        welc.style.top = ypos * 1 + 'px';
+        if (window.innerWidth > 768) {
+            let ypos = window.pageYOffset;
+            let welc = document.getElementsByClassName('welcome')[0];
+            welc.style.top = ypos * 1 + 'px';
+        } else {
+            return false;
+        }
     })
 
 

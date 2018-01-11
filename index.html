@@ -201,11 +201,15 @@
             </div>
             <div class="contact-form">
                 <h1>CONTACT</h1>
-                <form id="myform">
-                    <input type="text" name="name" placeholder="  Name">
-                    <input type="email" name="email" placeholder="  Email">
-                    <textarea name="message" rows="3" placeholder=" Your message here"></textarea>
+                <form id="myform" onsubmit="submitForm(); return false;">
+                    <input id="name" type="text" name="name" placeholder="  Name" required> 
+                    <span id="errorname"></span>
+                    <input id="email" type="email" name="email" placeholder="  Email" required>
+                    <span id="erroremail"></span>
+                    <textarea id="message" name="text" rows="3" placeholder=" Your message here" required></textarea>
+                    <span id="errormessage"></span>
                     <input type="submit" value="Get in touch" name="submit" id="submit">
+                    <span id="status"></span>
                 </form>
                 <ul>
                     <li class="add-pad">
@@ -234,7 +238,7 @@
 
         <script src="js/aos.js" type="text/javascript"></script>
         <script type="text/javascript">
-            AOS.init();
+                    AOS.init();
         </script>
     </body>
 </html>
