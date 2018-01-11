@@ -180,7 +180,7 @@ html, body {
   color: black;
   text-align: center;
   display: block;
-  z-index: 1;
+  z-index: 3;
   position: relative; }
   .about .before-hobby {
     width: 100%;
@@ -436,8 +436,12 @@ html, body {
     .projects .project-item {
       width: 50%; } }
 @media screen and (min-width: 1600px) {
-  .projects {
-    padding: 0 15%; } }
+  .skills, .projects, .contact {
+    padding: 0 15%; }
+
+  .skills {
+    padding-top: 20px;
+    padding-bottom: 10px; } }
 .contact {
   display: flex;
   width: 100%;

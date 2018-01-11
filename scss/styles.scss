@@ -271,7 +271,7 @@ html, body{
     color: black;
     text-align: center;
     display: block;
-    z-index: 1;
+    z-index: 3;
     position: relative;
 
     .before-hobby{
@@ -629,8 +629,13 @@ html, body{
 }
 
 @media screen and (min-width: 1600px){
-    .projects{
+    .skills, .projects, .contact{
         padding: 0 15%;
+    }
+
+    .skills{
+        padding-top: 20px;
+        padding-bottom: 10px;
     }
 }
 
