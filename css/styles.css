@@ -454,7 +454,7 @@ html, body {
     width: 50%;
     height: 300px;
     margin: 0 30px;
-    -webkit-animation: zoom 25s infinite;
+    -webkit-animation: zoom 10s infinite;
     animation: zoom 10s infinite;
     background: url("../media/a3.jpg") no-repeat center;
     -webkit-background-size: cover;
@@ -466,6 +466,21 @@ html, body {
     box-shadow: 5px -5px 50px #A9A9A9; }
 @-webkit-keyframes zoom {
   0%,100% {
+    background-size: 100%; }
+  50% {
+    background-size: 105%; } }
+@-moz-keyframes zoom {
+  0%, 100% {
+    background-size: 100%; }
+  50% {
+    background-size: 105%; } }
+@-ms-keyframes zoom {
+  0%, 100% {
+    background-size: 100%; }
+  50% {
+    background-size: 105%; } }
+@-o-keyframes zoom {
+  0%, 100% {
     background-size: 100%; }
   50% {
     background-size: 105%; } }
