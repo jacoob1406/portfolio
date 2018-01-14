@@ -90,4 +90,9 @@ window.onload = function () {
         document.getElementById('video').style.opacity = 0;
         document.getElementById('video').style.display = 'none';
     };
+
+    if (navigator.appName == 'Microsoft Internet Explorer' || !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
+    {
+        alert("Please note that IE does not support some of animations included, the stable version for IE will be online 02.2018. It's better to use another browser for now :-)");
+    }
 };
